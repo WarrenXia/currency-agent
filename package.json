@@ -1,17 +1,19 @@
 {
   "name": "currency-agent",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "better-npm-run build:dev",
+    "build:prod": "better-npm-run build:prod",
+    "run:prod": "better-npm-run run:prod",
+    "createSV": "node ./tools/createStaticVersion"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:WarrenXia/currency-agent.git"
   },
   "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "ejs": "~2.4.1",
-    "express": "~4.13.4",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "cheerio": "^0.22.0",
+    "request": "^2.75.0"
   }
 }
