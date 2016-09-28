@@ -15,7 +15,7 @@ connection.connect(function(err) {
   console.log('connected as id ' + connection.threadId);
 });
 
-connection.query('CREATE TABLE current',function(err,rows){
+connection.query('show databases',function(err,rows){
   console.log(err);
   console.log(rows);
 });
