@@ -22,6 +22,7 @@ connection.query('create table if not exists CURRENCY (id int,name varchar(255),
   // console.log(rows);
   // console.log(fields);
 });
+
 connection.query('select * from CURRENCY', (err, rows, fields) => {
   // console.log(err);
   // console.log(rows);
