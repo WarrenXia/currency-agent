@@ -16,11 +16,5 @@ node_modules/
 # log
 log/
 
-# webpack 生成文件
-client/dist/
-client/dist/*
-client/build
-client/build/*
-
 # editor
 .idea

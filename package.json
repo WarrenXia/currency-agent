@@ -2,12 +2,6 @@
   "name": "currency-agent",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "better-npm-run build:dev",
-    "build:prod": "better-npm-run build:prod",
-    "run:prod": "better-npm-run run:prod",
-    "createSV": "node ./tools/createStaticVersion"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:WarrenXia/currency-agent.git"
@@ -16,5 +10,16 @@
     "cheerio": "^0.22.0",
     "mysql": "^2.11.1",
     "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-3"
+    ]
   }
 }
