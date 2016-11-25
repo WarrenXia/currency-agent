@@ -1,30 +1,27 @@
 "use strict";
-import mysql from 'mysql';
-let mysqlConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: '909005'
-};
-const initDatabase = mysql.createConnection(mysqlConfig);
+import request from 'request';
+import connection from './base';
+import {formatData} from './formatData';
 
-initDatabase.connect();
-// 创建数据库
-initDatabase.query('create database if not exists CURRENCY');
-initDatabase.end();
-
-mysqlConfig['database'] = 'CURRENCY';
-
-const connection = mysql.createConnection(mysqlConfig);
-connection.connect();
-// 创建数据表
-connection.query('create table if not exists CURRENCY (id int,name varchar(255),country varchar(255),timestamp timestamp,date date,time time,spotin varchar(255),cashin varchar(255),spotout varchar(255),cashout varchar(255),middleprice varchar(255) )', function (err, rows, fields) {
-  // console.log(err);
-  // console.log(rows);
-  // console.log(fields);
-});
-
-connection.query('select * from CURRENCY', (err, rows, fields) => {
-  // console.log(err);
-  // console.log(rows);
-  console.log(fields);
+// connection.query('select * from CURRENCY')
+//   .on('fields', function (fields) {
+//     console.log(fields)
+//   }).on('rows', function (rows) {
+//     // console.log(rows);
+//   }).on('result', function (result) {
+//     // console.log(result);
+//   }).on('error', function (error) {
+//     console.error(error);
+//   });
+request.get({
+  url: 'http://www.boc.cn/sourcedb/whpj/index.html',
+  headers: {
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.98 Safari/537.36'
+  }
+}, function (error, res, body) {
+  if (error) {
+    console.error(error);
+  } else {
+    formatData(body);
+  }
 });
