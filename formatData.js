@@ -1,6 +1,6 @@
 "use strict";
 import cheerio from 'cheerio';
-import connection from './base';
+import connection from './connection';
 import currencyConfig from './currencyConfig.json';
 const formatData = (data) => {
   let $ = cheerio.load(data, {
@@ -26,17 +26,17 @@ const formatData = (data) => {
       currencyLi.date = date;
       currencyLi.time = time;
       currencyLi.timestamp = Date.parse(`${date} ${time}`);
-      let sqlSearch = `INSERT INTO CURRENCY(id,name,area,symbol,timestamp,date,time,spotin,cashin,spotout,cashout,middleprice) SELECT ${currencyLi.id},'${currencyLi.name}','${currencyLi.area}','${currencyLi.symbol}',${currencyLi.timestamp},'${currencyLi.date}','${currencyLi.time}','${currencyLi.spotin}','${currencyLi.cashin}','${currencyLi.spotout}','${currencyLi.cashout}','${currencyLi.middleprice}' FROM DUAL WHERE NOT EXISTS(SELECT * FROM CURRENCY WHERE id = ${currencyLi.id} and timestamp=${currencyLi.timestamp})`;
-      connection.query(sqlSearch, function (err, rows, fields) {
+      let sqlSearch = `INSERT INTO CURRENCY.CURRENCY(id,name,area,symbol,timestamp,date,time,spotin,cashin,spotout,cashout,middleprice) SELECT ${currencyLi.id},'${currencyLi.name}','${currencyLi.area}','${currencyLi.symbol}',${currencyLi.timestamp},'${currencyLi.date}','${currencyLi.time}','${currencyLi.spotin}','${currencyLi.cashin}','${currencyLi.spotout}','${currencyLi.cashout}','${currencyLi.middleprice}' FROM DUAL WHERE NOT EXISTS(SELECT * FROM CURRENCY.CURRENCY WHERE id = ${currencyLi.id} and timestamp=${currencyLi.timestamp})`;
+      // console.log(sqlSearch);
+      connection.query(sqlSearch, function (err, results, fields) {
         if (err) {
           console.log(err);
-        } else {
+        } else if (results.affectedRows > 0) {
+          console.log(results);
           console.log('Stored data successfully');
         }
       });
     }
   }
 };
-export {
-  formatData
-};
+export default formatData;

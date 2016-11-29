@@ -1,9 +1,6 @@
 "use strict";
 import request from 'request';
-import connection from './base';
-import {
-  formatData
-} from './formatData';
+import formatData from './formatData';
 // 抓取数据
 const getData = () => {
   for (let i = 0; i < 10; i++) {
@@ -27,7 +24,9 @@ const getData = () => {
     });
   }
 };
-// 每隔三十分钟抓取一次数据
-setInterval(function () {
-  getData();
-}, 1000 * 60 * 30);
+export default function dataResult() {
+  // 每隔三十分钟抓取一次数据
+  setInterval(function () {
+    getData();
+  }, 1000 * 60 * 30);
+}
