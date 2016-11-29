@@ -1,6 +1,6 @@
 "use strict";
 import cheerio from 'cheerio';
-import connection from './connection';
+import {connection} from './connection';
 import currencyConfig from './currencyConfig.json';
 const formatData = (data) => {
   let $ = cheerio.load(data, {
