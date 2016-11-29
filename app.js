@@ -1,5 +1,5 @@
 "use strict";
-import dataResult from './agent';
+import agent from './agent';
 import connection from './connection';
 
 connection.connect();
@@ -29,7 +29,7 @@ async function app() {
   try {
     await createDatabase();
     await createTable();
-    dataResult();
+    agent();
   } catch (e) {
     console.error(e);
   }

@@ -24,7 +24,7 @@ const getData = () => {
     });
   }
 };
-export default function dataResult() {
+export default function agent() {
   // 每隔三十分钟抓取一次数据
   setInterval(function () {
     getData();
