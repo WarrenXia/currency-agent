@@ -3,7 +3,7 @@ import mysql from 'mysql';
 let mysqlConfig={
   host: 'localhost',
   user: 'root',
-  password: '909005'
+  password: 'currency'
 };
 const initDatabase = mysql.createConnection(mysqlConfig);
 initDatabase.connect();

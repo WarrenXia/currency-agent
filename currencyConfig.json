@@ -1,21 +1,107 @@
 {
-  "美元": ["america", 101],
-  "新台币": ["taiwan", 102],
-  "港币": ["hongkong", 103],
-  "澳门元": ["macao", 104],
-  "日元": ["japan", 105],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101],
-  "美元": ["america", 101]
+  "人民币": {
+    "code": 142,
+    "area": "China",
+    "symbol": "CNY"
+  },
+  "美元": {
+    "code": 502,
+    "area": "America",
+    "symbol": "USD"
+  },
+  "新台币": {
+    "code": 143,
+    "area": "Taiwan",
+    "symbol": "TWD"
+  },
+  "港币": {
+    "code": 110,
+    "area": "Hong Kong",
+    "symbol": "HKD"
+  },
+  "澳门元": {
+    "code": 121,
+    "area": "Macao",
+    "symbol": "MOP"
+  },
+  "日元": {
+    "code": 116,
+    "area": "Japan",
+    "symbol": "JPY"
+  },
+  "韩国元": {
+    "code": 133,
+    "area": "South Korea",
+    "symbol": "KRW"
+  },
+  "欧元": {
+    "code": 300,
+    "area": "Europe",
+    "symbol": "EUR"
+  },
+  "英镑": {
+    "code": 303,
+    "area": "UK",
+    "symbol": "GBP"
+  },
+  "加拿大元": {
+    "code": 501,
+    "area": "Canada",
+    "symbol": "CAD"
+  },
+  "澳大利亚元": {
+    "code": 601,
+    "area": "Australia",
+    "symbol": "AUD"
+  },
+  "新西兰元": {
+    "code": 609,
+    "area": "New Zealand",
+    "symbol": "NZD"
+  },
+  "泰国铢": {
+    "code": 136,
+    "area": "Thailand",
+    "symbol": "THB"
+  },
+  "新加坡元": {
+    "code": 132,
+    "area": "Singapore",
+    "symbol": "SGD"
+  },
+  "菲律宾比索": {
+    "code": 129,
+    "area": "Philippines",
+    "symbol": "PHP"
+  },
+  "卢布": {
+    "code": 332,
+    "area": "Russia",
+    "symbol": "SUR"
+  },
+  "印度卢比": {
+    "code": 404,
+    "area": "India",
+    "symbol": "INR"
+  },
+  "巴西里亚尔": {
+    "code": 405,
+    "area": "Brazil",
+    "symbol": "BRL"
+  },
+  "阿联酋迪拉姆": {
+    "code": 406,
+    "area": "The United Arab Emirates",
+    "symbol": "AED"
+  },
+  "南非兰特": {
+    "code": 407,
+    "area": "South Africa",
+    "symbol": "ZAR"
+  },
+  "印尼卢比": {
+    "code": 408,
+    "area": "Indonesia",
+    "symbol": "IDR"
+  }
 }
