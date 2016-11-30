@@ -8,7 +8,7 @@ const mysqlConfig = {
 const connection = mysql.createConnection(mysqlConfig);
 connection.connect();
 // 使用promise封装
-const createQuery = (query) => {
+const queryData = (query) => {
   return new Promise(function (resolve, reject) {
     connection.query(query, function (error, results, fileds) {
       if (error) {
@@ -21,5 +21,5 @@ const createQuery = (query) => {
 };
 export {
   connection,
-  createQuery
+  queryData
 };
