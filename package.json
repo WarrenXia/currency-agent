@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git@github.com:WarrenXia/currency-agent.git"
   },
+  "author": "neoxia <xsh613@gmail.com>",
   "dependencies": {
     "cheerio": "^0.22.0",
     "mysql": "^2.11.1",
