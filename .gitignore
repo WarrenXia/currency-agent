@@ -8,6 +8,7 @@ node_modules/
 
 # gulp
 .debug.js
+app/
 
 # bowser
 .bower-cache
